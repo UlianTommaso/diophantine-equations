@@ -26,6 +26,19 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
+      - name: Inject Password
+        shell: bash
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+        run: |
+          # Se il secret è vuoto, usa un valore di fallback o errore
+          if [ -z "$SITE_PASSWORD" ]; then
+            echo "WARNING: SITE_PASSWORD secret is missing! Using fallback 'admin'."
+            SITE_PASSWORD="admin"
+          fi
+          # Sostituisce la placeholder nel file script.js
+          sed -i "s/__PASSWORD_PLACEHOLDER__/$SITE_PASSWORD/g" script.js
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

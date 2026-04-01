@@ -7,127 +7,147 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Diophantine Equations</h1>
-        <p>Una raccolta di materiali di approfondimento sulle equazioni diofantee.</p>
-    </header>
+    <!-- Login Overlay -->
+    <div id="login-overlay">
+        <div class="login-card">
+            <h1>Accesso Riservato</h1>
+            <p>Inserisci la password per accedere ai materiali.</p>
+            <form id="login-form">
+                <input type="password" id="password-input" placeholder="Password" required autofocus>
+                <button type="submit">Entra</button>
+                <p id="login-error" style="display: none;">Password errata. Riprova.</p>
+            </form>
+        </div>
+    </div>
 
-    <main class="file-list">
-        <!-- Zannier.CelebriProblemi.pdf -->
-        <a href="files/Zannier.CelebriProblemi.pdf" class="file-item" download>
-            <div class="file-info">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                </div>
-                <div class="file-details">
-                    <h2>Zannier - Celebri Problemi</h2>
-                    <p class="meta">PDF • 174 KB</p>
-                </div>
-            </div>
-            <div class="download-btn">Scarica</div>
-        </a>
+    <!-- Main Content (Hidden by default) -->
+    <div id="secure-content" style="display: none;">
+        <header>
+            <h1>Diophantine Equations</h1>
+            <p>Una raccolta di materiali di approfondimento sulle equazioni diofantee.</p>
+        </header>
 
-        <!-- FastFactorization.pdf -->
-        <a href="files/FastFactorization.pdf" class="file-item" download>
-            <div class="file-info">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        <main class="file-list">
+            <!-- Zannier.CelebriProblemi.pdf -->
+            <a href="files/Zannier.CelebriProblemi.pdf" class="file-item" download>
+                <div class="file-info">
+                    <div class="file-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="file-details">
+                        <h2>Zannier - Celebri Problemi</h2>
+                        <p class="meta">PDF • 174 KB</p>
+                    </div>
                 </div>
-                <div class="file-details">
-                    <h2>Fast Factorization</h2>
-                    <p class="meta">PDF • 31 KB</p>
-                </div>
-            </div>
-            <div class="download-btn">Scarica</div>
-        </a>
+                <div class="download-btn">Scarica</div>
+            </a>
 
-        <!-- Weil.TeoriaDeiNumeri.pdf -->
-        <a href="files/Weil.TeoriaDeiNumeri.pdf" class="file-item" download>
-            <div class="file-info">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <!-- FastFactorization.pdf -->
+            <a href="files/FastFactorization.pdf" class="file-item" download>
+                <div class="file-info">
+                    <div class="file-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="file-details">
+                        <h2>Fast Factorization</h2>
+                        <p class="meta">PDF • 31 KB</p>
+                    </div>
                 </div>
-                <div class="file-details">
-                    <h2>Weil - Teoria dei Numeri</h2>
-                    <p class="meta">PDF • 19.8 MB</p>
-                </div>
-            </div>
-            <div class="download-btn">Scarica</div>
-        </a>
+                <div class="download-btn">Scarica</div>
+            </a>
 
-        <!-- Littlewood.Counterexample.pdf -->
-        <a href="files/Littlewood.Counterexample.pdf" class="file-item" download>
-            <div class="file-info">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <!-- Weil.TeoriaDeiNumeri.pdf -->
+            <a href="files/Weil.TeoriaDeiNumeri.pdf" class="file-item" download>
+                <div class="file-info">
+                    <div class="file-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="file-details">
+                        <h2>Weil - Teoria dei Numeri</h2>
+                        <p class="meta">PDF • 19.8 MB</p>
+                    </div>
                 </div>
-                <div class="file-details">
-                    <h2>Littlewood - Counterexample</h2>
-                    <p class="meta">PDF • 94 KB</p>
-                </div>
-            </div>
-            <div class="download-btn">Scarica</div>
-        </a>
+                <div class="download-btn">Scarica</div>
+            </a>
 
-        <!-- TwoInvolutions.pdf -->
-        <a href="files/TwoInvolutions.pdf" class="file-item" download>
-            <div class="file-info">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <!-- Littlewood.Counterexample.pdf -->
+            <a href="files/Littlewood.Counterexample.pdf" class="file-item" download>
+                <div class="file-info">
+                    <div class="file-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="file-details">
+                        <h2>Littlewood - Counterexample</h2>
+                        <p class="meta">PDF • 94 KB</p>
+                    </div>
                 </div>
-                <div class="file-details">
-                    <h2>Two Involutions</h2>
-                    <p class="meta">PDF • 205 KB</p>
-                </div>
-            </div>
-            <div class="download-btn">Scarica</div>
-        </a>
+                <div class="download-btn">Scarica</div>
+            </a>
 
-        <!-- TwoSquares.pdf -->
-        <a href="files/TwoSquares.pdf" class="file-item" download>
-            <div class="file-info">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <!-- TwoInvolutions.pdf -->
+            <a href="files/TwoInvolutions.pdf" class="file-item" download>
+                <div class="file-info">
+                    <div class="file-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="file-details">
+                        <h2>Two Involutions</h2>
+                        <p class="meta">PDF • 205 KB</p>
+                    </div>
                 </div>
-                <div class="file-details">
-                    <h2>Two Squares</h2>
-                    <p class="meta">PDF • 17 KB</p>
-                </div>
-            </div>
-            <div class="download-btn">Scarica</div>
-        </a>
+                <div class="download-btn">Scarica</div>
+            </a>
 
-        <!-- Windmills.pdf -->
-        <a href="files/Windmills.pdf" class="file-item" download>
-            <div class="file-info">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <!-- TwoSquares.pdf -->
+            <a href="files/TwoSquares.pdf" class="file-item" download>
+                <div class="file-info">
+                    <div class="file-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="file-details">
+                        <h2>Two Squares</h2>
+                        <p class="meta">PDF • 17 KB</p>
+                    </div>
                 </div>
-                <div class="file-details">
-                    <h2>Windmills</h2>
-                    <p class="meta">PDF • 82 KB</p>
-                </div>
-            </div>
-            <div class="download-btn">Scarica</div>
-        </a>
+                <div class="download-btn">Scarica</div>
+            </a>
 
-        <!-- ZarembaConjecture.Graph.pdf -->
-        <a href="files/ZarembaConjecture.Graph.pdf" class="file-item" download>
-            <div class="file-info">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <!-- Windmills.pdf -->
+            <a href="files/Windmills.pdf" class="file-item" download>
+                <div class="file-info">
+                    <div class="file-info">
+                        <div class="file-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <div class="file-details">
+                            <h2>Windmills</h2>
+                            <p class="meta">PDF • 82 KB</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="file-details">
-                    <h2>Zaremba Conjecture - Graph</h2>
-                    <p class="meta">PDF • 43 KB</p>
-                </div>
-            </div>
-            <div class="download-btn">Scarica</div>
-        </a>
-    </main>
+                <div class="download-btn">Scarica</div>
+            </a>
 
-    <footer>
-        <p>© 2026 Diophantine Equations. Built with minimalism in mind.</p>
-    </footer>
+            <!-- ZarembaConjecture.Graph.pdf -->
+            <a href="files/ZarembaConjecture.Graph.pdf" class="file-item" download>
+                <div class="file-info">
+                    <div class="file-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <div class="file-details">
+                        <h2>Zaremba Conjecture - Graph</h2>
+                        <p class="meta">PDF • 43 KB</p>
+                    </div>
+                </div>
+                <div class="download-btn">Scarica</div>
+            </a>
+        </main>
+
+        <footer>
+            <p>© 2026 Diophantine Equations. Built with minimalism in mind.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
